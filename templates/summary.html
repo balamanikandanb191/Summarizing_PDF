@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Summary</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        /* Body Background with Parallax Effect */
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Use local image or fallback to external URL if local image is not available */
+           background-size: cover;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+
+        /* Parallax Effect on Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: -1;
+            transform: scale(1.05);
+            filter: blur(3px) brightness(0.7);
+        }
+
+        /* Frame with Animated Gradient Border */
+        .content-frame {
+            position: relative;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            animation: borderAnimation 6s linear infinite;
+            border: 5px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(135deg, #ff6f61, #ff9e67, #ffe600, #67e6dc, #ff6f61);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Heading with Pulsing Glow and Color Shift */
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: colorShift 4s infinite, glowPulse 2.5s infinite;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Keyframes for Color Shift */
+        @keyframes colorShift {
+            0% { color: #ff6f61; }
+            25% { color: #ff9e67; }
+            50% { color: #ffe600; }
+            75% { color: #67e6dc; }
+            100% { color: #ff6f61; }
+        }
+
+        /* Keyframes for Glow Pulse */
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); }
+            50% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+        }
+
+        /* Keyframes for Border Animation */
+        @keyframes borderAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Summary Text */
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Button Styles */
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Interactive Color Animation for Button */
+        a:hover {
+            color: #ffe600;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-frame">
+        <h2>Summary of {{ filename }}</h2>
+        <p>{{ summary }}</p>
+        <a href="{{ url_for('export_summary_pdf', filename=filename) }}">Download Summary as PDF</a>
+        <a href="{{ url_for('upload_document') }}">Upload Another Document</a>
+    </div>
+</body>
+</html>

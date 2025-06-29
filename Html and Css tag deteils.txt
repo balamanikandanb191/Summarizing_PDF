@@ -1,0 +1,97 @@
+HTML (Hypertext Markup Language) is the standard language used to create and design documents on the web. HTML tags are the building blocks of HTML and define how content is structured and presented on a web page. Here’s a description of common HTML tags:
+
+ 1. ..`<!DOCTYPE html>`..
+   - ..Description:.. Defines the document type and version of HTML being used. It’s placed at the very beginning of the HTML document.
+   - ..Example:.. `<!DOCTYPE html>`
+
+ 2. ..`<html>`..
+   - ..Description:.. The root element that wraps the entire HTML document. It contains all other HTML elements.
+   - ..Example:.. `<html> ... </html>`
+
+ 3. ..`<head>`..
+   - ..Description:.. Contains meta-information about the HTML document, such as the title, character set, styles, scripts, and other metadata.
+   - ..Example:.. `<head> ... </head>`
+
+ 4. ..`<title>`..
+   - ..Description:.. Sets the title of the HTML document, which is displayed on the browser tab.
+   - ..Example:.. `<title>My Web Page</title>`
+
+ 5. ..`<meta>`..
+   - ..Description:.. Provides metadata about the HTML document, such as character set, author, description, and viewport settings.
+   - ..Example:.. `<meta charset="UTF-8">`
+
+ 6. ..`<body>`..
+   - ..Description:.. Contains the content of the HTML document that is displayed in the browser, such as text, images, links, and other elements.
+   - ..Example:.. `<body> ... </body>`
+
+ 7. ..`<h1>` to `<h6>`..
+   - ..Description:.. Define headings, with `<h1>` being the highest (most important) level and `<h6>` being the lowest.
+   - ..Example:.. `<h1>Heading 1</h1>`
+
+ 8. ..`<p>`..
+   - ..Description:.. Defines a paragraph of text.
+   - ..Example:.. `<p>This is a paragraph.</p>`
+
+ 9. ..`<a>`..
+   - ..Description:.. Defines a hyperlink that links to another page or resource.
+   - ..Example:.. `<a href="https://www.example.com">Visit Example</a>`
+
+ 10. ..`<img>`..
+   - ..Description:.. Embeds an image in the HTML document. Attributes like `src` and `alt` are used to specify the image source and alternative text.
+   - ..Example:.. `<img src="image.jpg" alt="Description of image">`
+
+ 11. ..`<ul>` and `<ol>`..
+   - ..Description:.. Define unordered (bulleted) and ordered (numbered) lists, respectively. List items are defined with the `<li>` tag.
+   - ..Example:.. 
+     - Unordered: `<ul><li>Item 1</li><li>Item 2</li></ul>`
+     - Ordered: `<ol><li>Item 1</li><li>Item 2</li></ol>`
+
+ 12. ..`<div>`..
+   - ..Description:.. Defines a division or section in an HTML document. It’s commonly used as a container for other elements to apply styles or scripts.
+   - ..Example:.. `<div> ... </div>`
+
+ 13. ..`<span>`..
+   - ..Description:.. Inline container used to group small chunks of text or other inline elements for styling or scripting purposes.
+   - ..Example:.. `<span style="color:red">Red Text</span>`
+
+ 14. ..`<form>`..
+   - ..Description:.. Defines an HTML form for user input. The form can contain various input elements like text fields, checkboxes, and buttons.
+   - ..Example:.. `<form> ... </form>`
+
+ 15. ..`<input>`..
+   - ..Description:.. Defines an input field within a form. The `type` attribute specifies the kind of input (text, password, submit, etc.).
+   - ..Example:.. `<input type="text" name="username">`
+
+ 16. ..`<button>`..
+   - ..Description:.. Defines a clickable button, often used to submit forms.
+   - ..Example:.. `<button type="submit">Submit</button>`
+
+ 17. ..`<table>`..
+   - ..Description:.. Defines a table with rows and columns. `<tr>` defines a row, `<th>` defines a header cell, and `<td>` defines a standard cell.
+   - ..Example:..
+     ```html
+     <table>
+       <tr>
+         <th>Header 1</th>
+         <th>Header 2</th>
+       </tr>
+       <tr>
+         <td>Data 1</td>
+         <td>Data 2</td>
+       </tr>
+     </table>
+     ```
+
+ 18. ..`<link>`..
+   - ..Description:.. Used to link external resources like stylesheets to the HTML document.
+   - ..Example:.. `<link rel="stylesheet" href="styles.css">`
+
+ 19. ..`<script>`..
+   - ..Description:.. Embeds or links to a script (typically JavaScript) within the HTML document.
+   - ..Example:.. `<script src="script.js"></script>`
+
+ 20. ..`<footer>`..
+   - ..Description:.. Defines the footer for a document or section, typically containing information like copyright, contact links, or author information.
+   - ..Example:.. `<footer> ... </footer>`
+
+These are just some of the many HTML tags available. Each tag serves a specific purpose in defining the structure and content of a web page.
