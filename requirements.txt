@@ -3,3 +3,4 @@ transformers
 pdfplumber
 fpdf
 gunicorn
+torch
