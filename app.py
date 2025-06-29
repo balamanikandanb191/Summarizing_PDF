@@ -12,7 +12,8 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
 # Initialize the summarizer model with an explicit model name
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="Falconsai/text_summarization")
+
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_document():
